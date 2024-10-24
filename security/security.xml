@@ -1,0 +1,5 @@
+# file: ir.model.access.csv
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_medical_patient_user,medical.patient.user,model_medical_patient,base.group_user,1,1,1,1
+access_medical_history_user,medical.history.user,model_medical_history,base.group_user,1,1,1,1
+access_medical_doctor_user,medical.doctor.user,model_medical_doctor,base.group_user,1,1,1,1
