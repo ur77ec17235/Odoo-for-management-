@@ -9,7 +9,7 @@
         - Medical History Tracking
         - Doctor Records
     """,
-    'author': 'Your Name',
+    'author': 'HONGVIET',
     'website': 'https://www.yourwebsite.com',
     
     # Dependencies
@@ -21,6 +21,10 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/menu.xml',
+        'views/hospital_room_view.xml',
+        'views/hospital_bed_view.xml',
+        'views/patient_admission_view.xml',
+        'security/ir.model.access.csv',
     ],
     
     'demo': [

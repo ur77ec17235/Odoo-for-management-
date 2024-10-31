@@ -1,0 +1,16 @@
+from odoo import models, fields, api
+
+class Patient(models.Model):
+    _inherit = 'medical.patient'
+
+    admission_ids = fields.One2many('patient.admission', 'patient_id', string='Admissions')
+    current_admission_id = fields.Many2one('patient.admission', string='Current Admission',
+        compute='_compute_current_admission')
+    
+    @api.depends('admission_ids')
+    def _compute_current_admission(self):
+        for patient in self:
+            current = patient.admission_ids.filtered(
+                lambda r: r.state == 'admitted'
+            )
+            patient.current_admission_id = current and current[0] or False
